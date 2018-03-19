@@ -1,0 +1,87 @@
+#menu{
+  background-color: #272C33;
+  z-index: 1;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  min-height: 100%;
+}
+
+.menu-logo{
+  list-style: none;
+  height: 70px;
+  border-bottom: #9395A0 1px solid;
+  margin-bottom: 33px;
+}
+
+#menu ul{
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 0px;
+}
+
+.menu-item{
+  list-style: none;
+  margin-top: 10px;
+}
+
+.menu-subitem{
+  list-style: none;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.menu-item a{
+  text-decoration: none;
+  color: #9395A0;
+}
+
+.menu-item-down{
+  float: right
+}
+
+.menu-item i{
+  margin-right: 10px;
+}
+
+.menu-item a:hover{
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+#conteudo{
+  margin: 0px;
+  padding: 0px;
+  background-color: #F1F2F7;
+}
+
+#navbar{
+  width: 100%;
+  height: 70px;
+  margin: 0px;
+  background-color: #FFFFFF;
+}
+
+#navbar-toogle i{
+  margin-top: 20px;
+  font-size: 30px;
+  color: #33363a;
+ }
+
+#navbar-botoes{
+  text-align: right;
+  padding-top: 23px;
+  color: #33363a;
+}
+
+.navbar-shadow{
+	-webkit-box-shadow: 0 5px 6px -6px #777;
+	   -moz-box-shadow: 0 5px 6px -6px #777;
+	        box-shadow: 0 5px 6px -6px #777;
+}
+
+#conteudo-rotas{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+

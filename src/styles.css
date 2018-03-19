@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+body{
+  /*
+  Esconde o scrollbar
+  overflow-x: hidden;
+  overflow-y: hidden;
+  */
+
+  margin: 0px;
+  padding: 0px;
+  background: #F1F2F7;
+}
+
+/*********************************************************/
+/*Maximiza as div do layout para ficar com a altura 100% */
+/*********************************************************/
+html,body,.col-md-12,.row {
+  height: 100%;
+}
+.fill {
+  min-height: 100%;
+  height: 100%;
+}
+/*********************************************************/
