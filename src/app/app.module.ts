@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 import { AutenticacaoService } from './autenticacao.service';
 import { TemplateComponent } from './template/template.component';
 import { LoginComponent } from './login/login.component';
+import { AutenticacaoGuard } from './autenticacao.guard';
 
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'index', component: TemplateComponent },
+  { path: '', component: TemplateComponent, canActivate: [AutenticacaoGuard] },
+  { path: 'login', component: LoginComponent, canActivate: [AutenticacaoGuard] },
+  { path: 'index', component: TemplateComponent, canActivate: [AutenticacaoGuard] },
 ];
 
 
@@ -32,7 +34,8 @@ const routes: Routes = [
   ],
   providers: [
     AutenticacaoService,
-    JwtHelper
+    JwtHelper,
+    AutenticacaoGuard
   ],
   bootstrap: [AppComponent]
 })
