@@ -26,10 +26,17 @@ export class AutenticacaoService {
   }
 
   carregarToken() {
-    const token = localStorage.getItem('token');
-    if (token) {
-      this.jwtPaylload = this.jwt.decodeToken(token);
+    if (this.getToken()) {
+      this.jwtPaylload = this.jwt.decodeToken(this.getToken());
     }
+  }
+
+  validarToken(): boolean {
+    return !this.jwt.isTokenExpired(this.getToken());
+  }
+
+  getToken(): string {
+    return localStorage.getItem('token');
   }
 
 }
