@@ -7,10 +7,11 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class AutenticacaoService {
 
-  jwtPaylload: any;
+  jwtPayload: any;
+  idtel: String;
 
   constructor(private http: Http, private jwt: JwtHelper) {
-    this.carregarToken();
+    this.setPayload();
   }
 
   autenticar(login: String, senha: String): Promise<any> {
@@ -18,16 +19,17 @@ export class AutenticacaoService {
       .toPromise()
         .then(sucesso => {
           localStorage.setItem('token', sucesso.json().token);
-          this.carregarToken();
+          this.setPayload();
         })
         .catch(erro => {
           return Promise.reject('Erro ao efetuar autenticação');
         });
   }
 
-  carregarToken() {
+  setPayload() {
     if (this.getToken()) {
-      this.jwtPaylload = this.jwt.decodeToken(this.getToken());
+      this.jwtPayload = this.jwt.decodeToken(this.getToken());
+      console.log(this.jwtPayload);
     }
   }
 

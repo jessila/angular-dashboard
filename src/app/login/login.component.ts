@@ -22,8 +22,7 @@ export class LoginComponent {
     private router: Router
   ) {}
 
-  autenticar(form: NgForm) {
-
+  entrar() {
     this.autenticacaoService.autenticar(this.login, this.senha)
       .then((sucesso) => {
         this.router.navigate(['/index']);
